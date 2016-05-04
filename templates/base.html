@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}welcome to the hexminton service{% endblock %}</title>
+</head>
+<body background="{% static 'base/img/odd_background.png' %}">
+{%  block content %}
+    <h1>welcome to the Hexminton page</h1>
+    there are {{ count }} users registered to the hexminton service
+{% endblock %}
+
+
+</body>
+</html>
