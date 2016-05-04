@@ -1,16 +1,62 @@
+{% extends 'bootstrap3/bootstrap3.html' %}
+
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}welcome to the hexminton service{% endblock %}</title>
-</head>
-<body background="{% static 'base/img/odd_background.png' %}">
-{%  block content %}
-    <h1>welcome to the Hexminton page</h1>
-    there are {{ count }} users registered to the hexminton service
+
+{% load bootstrap3 %}
+
+{% load bootstrap_themes %}
+
+{% bootstrap_styles theme='simplex' type='min.css' %}
+
+{% block bootstrap3_extra_head %}
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <link href="{% static 'base/css/style.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 
+{% block bootstrap3_title %}
+    {% block title %}
+        welcome to the hexminton service
+    {% endblock %}
+{% endblock %}
 
-</body>
-</html>
+{% block bootstrap3_content %}
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="{% url 'index' %}" class="navbar-brand">Hexminton</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hvr-curl-top-right"><a href="{% url 'index' %}"> Home</a></li>
+                    <li class="hvr-curl-top-right"><a href="{% url 'about' %}"> About</a></li>
+                    <li class="hvr-curl-top-right"><a href="{% url 'contact' %}"> Contact</a></li>
+                </ul>
+                <div class="navbar-form pullright">
+                    login goes here
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <img src="{% static 'base/img/odd_background.png' %}" class="bg"/>
+        <div class="parallax">
+            {% block body %}
+                <div class="col-md-8 col-md-offset-2 maincontent">
+                    <h1>welcome to the Hexminton page</h1>
+                    there are {{ count }} users registered to the hexminton service
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+    <div class="row text-center navbar footer">
+        <div class="col-md-12">
+            <p>2016 Group 13 design</p>
+        </div>
+    </div>
+{% endblock %}

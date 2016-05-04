@@ -12,4 +12,4 @@ def hexminton(request):
     context ={
         'count': count,
     }
-    return render(request, 'hexminton.html', context)
+    return render(request, 'base.html', context)
