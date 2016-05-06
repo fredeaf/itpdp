@@ -128,6 +128,13 @@ STATIC_URL = '/static/'
 #registration
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = '/hexminton'
 
 #email
-EMAIL_BACKEND = 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "hexminton@gmail.com"
+EMAIL_HOST_PASSWORD = "GRP13design"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "hexminton@gmail.com"

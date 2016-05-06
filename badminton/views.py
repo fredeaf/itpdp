@@ -12,4 +12,7 @@ def hexminton(request):
     context ={
         'count': count,
     }
+    request.session['location'] = "unknown"
+    if request.user.is_authenticated():
+        request.session['location'] = "earth"
     return render(request, 'base.html', context)
