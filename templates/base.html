@@ -37,7 +37,7 @@
                     <li class="hvr-curl-top-right"><a href="{% url 'about' %}"> About</a></li>
                     <li class="hvr-curl-top-right"><a href="{% url 'contact' %}"> Contact</a></li>
                 </ul>
-                <div class="navbar-form pullright">
+                <div class="navbar-form pull-right">
                     login goes here
                 </div>
             </div>
@@ -46,12 +46,14 @@
     <div class="container-fluid">
         <img src="{% static 'base/img/odd_background.png' %}" class="bg"/>
         <div class="parallax">
+        <div class="row">
             {% block body %}
                 <div class="col-md-8 col-md-offset-2 maincontent">
                     <h1>welcome to the Hexminton page</h1>
                     there are {{ count }} users registered to the hexminton service
                 </div>
             {% endblock %}
+        </div>
         </div>
     </div>
     <div class="row text-center navbar footer">
