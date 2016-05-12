@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block bootstrap3_title %}
+    {{ player.name }}
+{% endblock %}
+
+{% block body %}
+    <div class="col-md-8 col-md-offset-2 col-sm-12 maincontent">
+        <div class="detail_player_display">
+            <img class="detail_player_img" src="{% static 'base/img/anonymous-profile-picture.png' %}">
+            <span class="detail_player_name">{{ player.name }}</span>
+            <span class="detail_player_club">{{ player.club }}</span>
+            <span class="detail_player_about">{{ player.about }}</span>
+            <div class="detail_player_comments_title">Comments for this player</div>
+            <div class="detail_player_comments">
+                {% if player.comments %}
+                    {% for comment in player.comments %}
+                        {{ comment.text }}
+                    {% endfor %}
+                {% else %}
+                    No one has commented on this player yet
+                {% endif %}
+            </div>
+        {% if player.result %}
+                    {% for result in player.results %}
+                        {{ result.text }}
+                    {% endfor %}
+                {% else %}
+                    No results submitted for this player yet
+                {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,18 +1,22 @@
 from django.shortcuts import render
 
-from .models import User
+from .models import Player
 
 
 def index(request):
-    return render(request, 'template.html')
+    return render(request, 'contact.html')
 
 
 def hexminton(request):
-    count = User.objects.all().count()
-    context ={
-        'count': count,
+    players = Player.objects.all()
+    context = {
+        'players': players,
     }
-    request.session['location'] = "unknown"
-    if request.user.is_authenticated():
-        request.session['location'] = "earth"
     return render(request, 'base.html', context)
+
+
+def player_details(request, player_id):
+    context = {
+        'player' : Player.objects.get(pk=player_id),
+               }
+    return render(request, 'players/detail.html', context)

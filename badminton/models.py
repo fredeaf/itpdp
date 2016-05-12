@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class User(models.Model):
+class Player (models.Model):
     name = models.CharField(max_length=100)
     club = models.CharField(max_length=100)
     sex = models.CharField(max_length=10)

@@ -38,7 +38,7 @@
                     <li class="hvr-curl-top-right"><a href="{% url 'contact' %}"> Contact</a></li>
                 </ul>
                 <div class="navbar-form pull-right">
-                    login goes here
+                    player selection goes here
                 </div>
             </div>
         </div>
@@ -46,14 +46,22 @@
     <div class="container-fluid">
         <img src="{% static 'base/img/odd_background.png' %}" class="bg"/>
         <div class="parallax">
-        <div class="row">
-            {% block body %}
-                <div class="col-md-8 col-md-offset-2 maincontent">
-                    <h1>welcome to the Hexminton page</h1>
-                    there are {{ count }} users registered to the hexminton service
-                </div>
-            {% endblock %}
-        </div>
+            <div class="row">
+                {% block body %}
+                    <div class="col-md-8 col-md-offset-2 maincontent">
+                        <div style="text-align: center"><h1>welcome to the Hexminton page</h1></div>
+                        {% for player in players %}
+                            <a href="{% url 'player_details' player.id %}">
+                                <div class="hexminton_player_display">
+                                    <img src="{% static 'base/img/anonymous-profile-picture.png' %}">
+                                    <span class="hexminton_player_name">{{ player.name }}</span>
+                                    <span class="hexminton_player_club">{{ player.club }}</span>
+                                </div>
+                            </a>
+                        {% endfor %}
+                    </div>
+                {% endblock %}
+            </div>
         </div>
     </div>
     <div class="row text-center navbar footer">

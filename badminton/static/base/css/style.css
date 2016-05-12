@@ -161,7 +161,7 @@ img.bg {
 
 /* Storefront styles */
 
-.storefront_book_display {
+.hexminton_player_display {
     width: 200px;
     display: inline-block;
     text-align: center;
@@ -173,7 +173,7 @@ img.bg {
     font-weight: bold;
 }
 
-.storefront_book_author {
+.hexminton_player_name {
     font-size: 11px;
     display: block;
 }
@@ -184,27 +184,27 @@ img.bg {
 }
 
 /* Book detail styles */
-.detail_book_display {
+.detail_player_display {
     text-align: center;
     margin-top: 20px;
 }
 
-.detail_book_img {
+.detail_player_img {
     margin-bottom: 20px;
 }
 
-.detail_book_title {
+.detail_player_name {
     font-size: 20px;
     display: block;
     font-weight: bold;
 }
 
-.detail_book_author {
+.detail_player_club {
     font-size: 16px;
     display: block;
 }
 
-.detail_book_description {
+.detail_player_about {
     text-align: left;
     margin-top: 20px;
     width: 80%;
@@ -212,7 +212,7 @@ img.bg {
     margin-right: auto;
 }
 
-.detail_book_reviews_title {
+.detail_player_comments_title {
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 20px;
@@ -274,3 +274,54 @@ img.bg {
     text-align: right;
     margin-top: 20px;
 }
+
+/*player display style*/
+.hexminton_player_display {
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+}
+
+.hexminton_player_name {
+    font-size: 14px;
+    display: block;
+    font-weight: bold;
+}
+.hexminton_player_club {
+    font-size: 11px;
+    display: block;
+}
+
+/* player detail styles*/
+.detail_player_display{
+    text-align: center;
+    margin-top: 20px;
+}
+.detail_player_img{
+    margin-bottom: 20px;
+}
+.detail_player_name{
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+}
+.detail_player_club{
+    font-size: 16px;
+    display: block;
+}
+.detail_player_about {
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.detail_player_comments_title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    display: block;
+    font-weight: bold;
+}
+

@@ -1,9 +1,0 @@
-Hello!
-
-You've just signed up for an account for Hexminton. Please click the link below to activate:
-
-http://{{site.domain}}{$ url 'registration_activate' activation_key %}
-
-This link is valid for {{expiration_days}}. If you did not sign up with Hexminton, please ignore this email.
-
--The Hexminton Team
