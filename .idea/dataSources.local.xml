@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="c7023683-cf40-4729-b409-b6ae8dfa708f">
+      <auth-required>false</auth-required>
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Sqlite (Xerial) - {     'default': {         'ENGINE': 'django.db.backends.sqlite3',         'NAME': os.path.join(BASE_DIR, 'player_data.sqlite3'),     }" uuid="ad8d1786-43a5-42ba-896c-23d665832b9d">
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <first-sync>true</first-sync>
+    </data-source>
+  </component>
+</project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Django default" uuid="c7023683-cf40-4729-b409-b6ae8dfa708f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Sqlite (Xerial) - {     &apos;default&apos;: {         &apos;ENGINE&apos;: &apos;django.db.backends.sqlite3&apos;,         &apos;NAME&apos;: os.path.join(BASE_DIR, &apos;player_data.sqlite3&apos;),     }" uuid="ad8d1786-43a5-42ba-896c-23d665832b9d">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
