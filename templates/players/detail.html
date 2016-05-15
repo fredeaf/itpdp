@@ -23,13 +23,16 @@
                     No one has commented on this player yet
                 {% endif %}
             </div>
-        {% if player.result %}
+            <div class="detail_player_results_title">Results for this player</div>
+            <div class="detail_player_results">
+                {% if player.result %}
                     {% for result in player.results %}
                         {{ result.text }}
                     {% endfor %}
                 {% else %}
                     No results submitted for this player yet
                 {% endif %}
+            </div>
         </div>
     </div>
 

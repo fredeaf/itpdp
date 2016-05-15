@@ -7,3 +7,4 @@ class UserAdmin(admin.ModelAdmin):
     list_display = ('name', 'club', 'nfc_id')
 
 admin.site.register(Player, UserAdmin)
+

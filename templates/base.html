@@ -37,9 +37,6 @@
                     <li class="hvr-curl-top-right"><a href="{% url 'about' %}"> About</a></li>
                     <li class="hvr-curl-top-right"><a href="{% url 'contact' %}"> Contact</a></li>
                 </ul>
-                <div class="navbar-form pull-right">
-                    player selection goes here
-                </div>
             </div>
         </div>
     </nav>
@@ -49,7 +46,8 @@
             <div class="row">
                 {% block body %}
                     <div class="col-md-8 col-md-offset-2 maincontent">
-                        <div style="text-align: center"><h1>welcome to the Hexminton page</h1></div>
+                        <div style="text-align: center"><h1>welcome to the Hexminton page</h1>
+                        <h3>Please select a player to view detailed information</h3></div>
                         {% for player in players %}
                             <a href="{% url 'player_details' player.id %}">
                                 <div class="hexminton_player_display">

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" uploadOnCheckin="e2bebf5b-323c-4c4f-9390-a98d96ccb419">
+  <component name="PublishConfigData" serverName="ssd" uploadOnCheckin="e2bebf5b-323c-4c4f-9390-a98d96ccb419" showNewOnSourceInSync="false">
     <serverData>
       <paths name="ssd">
         <serverdata>
           <mappings>
-            <mapping deploy="/root/itpdp" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/django/django_project" local="$PROJECT_DIR$" web="/hexminton" />
           </mappings>
         </serverdata>
       </paths>
